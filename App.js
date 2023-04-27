@@ -1,14 +1,11 @@
+import { useEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import { SvgXml, SvgUri, SvgFromXml } from "react-native-svg";
 // import { BarCodeScanner } from 'expo-barcode-scanner';
-import { useEffect, useState } from "react";
 import Sprite from "./src/icons/icons-sprite.svg";
 import Icon, { LocalIcon } from "./Icon";
 
 export default function App() {
-  const backgroundSvg = require("./src/icons/icons-sprite.svg");
-  const svgString = backgroundSvg.toString();
   // const [hasPermission, setHasPermission] = useState(null);
   // const [scanned, setScanned] = useState(false);
 
@@ -34,47 +31,13 @@ export default function App() {
   // }
   return (
     <View style={styles.container}>
-      {/* <Text>Open up App.js to start working on your app!</Text> */}
-      {/* <SvgXml xml={svgString} width="100%" height="100%" /> */}
+     
       {/* <BarCodeScanner
         onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
         style={StyleSheet.absoluteFillObject}
       />
       {scanned && <Button title={'Tap to Scan Again'} onPress={() => setScanned(false)} />} */}
-      {/* <SvgFromXml  /> */}
-      {/* <SvgUri uri={require('./src/icons/icons-sprite.svg')} height={'100%'} style={{}}/> */}
-      {/* <Sprite style={{height:'10', width:'2'}}/> */}
-      {/* <SvgUri
-        uri={
-          "https://devassets.fudr.in/brand/freddiestg/Freddies-Sprite-min.svg"
-        }
-        style={{
-          position: "relative",
-          // bottom: 50,
-          // top: 50,
-          maxHeight: 25,
-          maxWidth:25,
-        }}
-      />
-      <SvgUri
-        uri={
-          "https://devassets.fudr.in/brand/freddiestg/Freddies-Sprite-min.svg"
-        }
-        style={{
-          position: "relative",
-          // bottom: 50,
-          // top: 50,
-          // maxHeight: 25,
-          // maxWidth:25,
-          // left:25,
-          // right: 2500
-          // right: 0,
-          // top: 0,
-          maxHeight: 25,
-          maxWidth: 25,
-          left: 100
-        }}
-      /> */}
+      
       <Icon/>
       <LocalIcon/>
       <Text>Open up App.js to start working on your app!</Text>
@@ -89,8 +52,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    // height: 10,
     overflow: "hidden",
-    // flexDirection:'row'
   },
 });
